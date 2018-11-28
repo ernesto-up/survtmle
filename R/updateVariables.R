@@ -72,6 +72,7 @@ updateVariables <- function(dataList, allJ, ofInterestJ, nJ, uniqtrt, ntrt, t0,
     merge_vars <- c("id", "t", "trt")
   }
   # the first time it's called these columns won't exist
+  # here is were the problem is 
   if (length(colInd) == 0) {
     dataList[[1]] <- merge(
       dataList[[1]],
